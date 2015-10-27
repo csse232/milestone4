@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 module PC(
     input [15:0] in,
-    output [15:0] out,
+    output reg [15:0] out,
     input clock,
     input PCWrite
     );
@@ -29,7 +29,7 @@ always @ (posedge clock)
 begin
 	if(PCWrite==1)
 	begin
-		pc_out = pc_in;
+		out = in;
 	end
 end
 endmodule
